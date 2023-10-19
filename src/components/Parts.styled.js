@@ -108,6 +108,7 @@ export const Input = styled('input')({
 //buttons
 export const Button = styled('button')({
     padding: '15px',
+    backgroundColor: '#4682B4',
     border: 'none',
     borderRadius: 15,
     boxShadow: '0px 15px 30px 0px rgba(0, 0, 0, 0.0)',
@@ -146,11 +147,11 @@ export const SingleImg = styled('img')({
 
 //cast + reviews
 export const LinkWrap = styled('div')({
-    margin: 0,
+    margin: '10px 50px',
     maxWidth: 400,
     display: 'flex',
     flexWrap: 'nowrap',
-    gap: 20,
+    gap: 70,
     alignItems: 'flex-start',
     justifyContent: 'left',
 })

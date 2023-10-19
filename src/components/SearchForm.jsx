@@ -29,7 +29,7 @@ const SearchForm = ({ submit }) => {
           placeholder="I search..."
           required
         />
-        <Button type="submit">Search</Button>
+        <Button type="submit">SEARCH</Button>
       </FormWrap>
     </form>
   );
