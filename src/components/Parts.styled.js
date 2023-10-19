@@ -94,7 +94,8 @@ export const FormWrap = styled('div')({
 })
     
 export const Input = styled('input')({
-    padding: 10,
+    padding: '10px 25px',
+    width: 1350,
     border: 'none',
     borderRadius: 15,
     boxShadow: '0px 15px 30px 0px rgba(0, 0, 0, 0.0)',
