@@ -2,18 +2,12 @@ import { useSearchParams } from 'react-router-dom';
 import { Button, FormWrap, Input } from './Parts.styled';
 
 const SearchForm = ({ submit }) => {
-  //const[value, setValue] = useState('')
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const queryByParams = searchParams.get('search') || ''
-
- 
-  const handleChange = ({ target: { value } }) => {
-    value ? setSearchParams({ search: value }) : setSearchParams({})
-  }
+  const queryByParams = searchParams.get('search') || '';
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     submit(queryByParams);
   }
 
@@ -23,11 +17,10 @@ const SearchForm = ({ submit }) => {
         <Input
           name="title"
           type="text"
-          onChange={handleChange}
-          id="searchMovies"
           value={queryByParams}
           placeholder="I search..."
           required
+          onChange={(e) => setSearchParams({ search: e.target.value })}
         />
         <Button type="submit">SEARCH</Button>
       </FormWrap>
@@ -35,4 +28,4 @@ const SearchForm = ({ submit }) => {
   );
 }
 
-export default SearchForm
+export default SearchForm;
