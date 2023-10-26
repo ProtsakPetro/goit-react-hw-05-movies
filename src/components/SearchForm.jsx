@@ -11,6 +11,16 @@ const SearchForm = ({ submit }) => {
     submit(queryByParams);
   }
 
+ 
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    if (inputValue === '') {
+      setSearchParams({ search: undefined }); 
+    } else {
+      setSearchParams({ search: inputValue });
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <FormWrap>
@@ -20,7 +30,7 @@ const SearchForm = ({ submit }) => {
           value={queryByParams}
           placeholder="I search..."
           required
-          onChange={(e) => setSearchParams({ search: e.target.value })}
+          onChange={handleInputChange}
         />
         <Button type="submit">SEARCH</Button>
       </FormWrap>
